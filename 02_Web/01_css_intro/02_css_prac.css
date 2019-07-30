@@ -1,0 +1,13 @@
+h1 {
+    color:red;
+    font-size: 100px;
+    background-color: black;
+    display: inline
+}
+
+h2 {
+    color:white;
+    font-size: 100px;
+    background-color: red;
+    display: inline
+}
