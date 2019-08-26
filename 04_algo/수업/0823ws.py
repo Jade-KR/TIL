@@ -11,7 +11,7 @@ def dfs(x, y):
         new_x = x + dx[i]
         new_y = y + dy[i]
 
-        if not (0<=new_x<16 and 0<=new_y<16):
+        if not (0<=new_x<16 and 0<=new_y<16): #인덱스 벗어나는 것 먼저 조건 걸어줘야함
             continue
 
         if data[new_y][new_x] == 3:
