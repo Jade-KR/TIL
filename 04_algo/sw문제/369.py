@@ -10,5 +10,5 @@ for i in tmp:
     print(i, end=" ")
 
 
-for i in range(1, n+1):
-    if i
+# for i in range(1, n+1):
+#     if i

@@ -26,7 +26,7 @@ for tc in range(1, T+1):
                    while val1[data[i]] <= val2[stack[-1]]:
                        arr.append(stack.pop())
                    stack.append(data[i])
-   # print(arr)
+   print(arr)
    for i in range(len(arr)):
        if arr[i].isdigit():
            stack.append(arr[i])

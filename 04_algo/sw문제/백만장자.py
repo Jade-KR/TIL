@@ -18,15 +18,6 @@ for tc in range(1, T+1):
     data = list(map(int, input().split()))
     total = 0
     stack = []
-    d_pop = []
+    s_pop = []
 
-    # for i in range(d-2, -1, -1):
-    #     if data[i] < max(data[i+1::]):
-    #         total += max(data[i+1::]) - data[i]
-    #
-    # print('#{} {}'.format(tc, total))
-
-    for i in range(len(data)-1):
-        if data[i] <= data[i+1]:
-            push(data[i])
 
