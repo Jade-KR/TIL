@@ -1,17 +1,6 @@
 import sys
 sys.stdin = open("백만장자.txt")
 
-
-def pop():
-    if len(stack) == 0:
-        return
-    return stack.pop()
-
-
-def push(target):
-    stack.append(target)
-
-
 T = int(input())
 for tc in range(1, T+1):
     d = int(input())
@@ -19,5 +8,8 @@ for tc in range(1, T+1):
     total = 0
     stack = []
     s_pop = []
+    for i in (d-1, -1, -1):
+        stack.append(data[i])
+        if data[i] > data[i-1]:
 
 

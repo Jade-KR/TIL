@@ -25,8 +25,8 @@ for tc in range(1, T+1):
 
     if cmp[k][l] > data[i][4]:
         break
-    for z in range(N):
-        for m in range(M):
+    for z in range(M):
+        for m in range(N):
             for o in color:
                 if cmp[z][m] == o:
                     tmp[o] += 1
