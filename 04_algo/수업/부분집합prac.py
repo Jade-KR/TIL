@@ -7,8 +7,8 @@ for i in range(1, 1 << len(arr)):
             sum += arr[j]
             print(arr[j], end=" ")
     print()
-    # if sum == 10:
-    #     for j in range(len(arr)):
-    #         if i & (1 << j):
-    #             print(arr[j], end=" ")
-    #     print()
+    if sum == 10:
+        for j in range(len(arr)):
+            if i & (1 << j):
+                print(arr[j], end=" ")
+        print()
