@@ -25,7 +25,7 @@ for tc in range(1, T+1):
     for i in range(M):
         p[data[i][0]-1][data[i][1]-1] = data[i][2]
         for j in range(8):
-            if 
+            if
             if p[data[i][0] - 1+dx[j]][data[i][1] - 1 + dy[j]] != data[i][2]:
 
 
