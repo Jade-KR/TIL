@@ -1,37 +1,35 @@
 def bfs(x, y):
-    global arr, visited
+    global N, maze, visited
     dx = [0, 1, 0, -1]
     dy = [1, 0, -1, 0]
     q = []
-    q.append((x, y))
-    visited[x][y] = 1
+    q.append((x, y))            #리스트로 큐 구현, 좌표는 튜플로 저장
+    visited[x][y] = 1           #방문 표시
     while len(q) != 0:
-        x, y = q.pop(0)
+        x, y = q.pop(0)         #deQ 으로 하면 더 조금 더 빠름
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if ny < 0 or ny == 100: continue
-            if nx < 0 or nx == 100: continue
-            if arr[nx][ny] == 3:
-                return 1
-            elif arr[nx][ny] == 0 and visited[nx][ny] == 0:
-                q.append([nx, ny])
-                visited[nx][ny] = 1
-    return 0
-
-
+            if ny < 0 or ny == N: continue
+            if nx < 0 or nx == N: continue
+            if maze[nx][ny] == 3 :                  # 출구인 경우 지나온 칸 반환
+                return 1      # 출발지는 칸 수에서 제외
+            elif maze[nx][ny] == 0 and visited[nx][ny] == 0: # 갈수 있는 곳 저장
+                q.append([nx, ny]) # enQ
+                visited[nx][ny] =  1
+    return 0  # 출구에 가지 못하고 모든 칸 방문
+def findStart(data):
+    for y in range(N):
+        for x in range(N):
+            if data[y][x] == 2:
+                return y, x
 import sys
-sys.stdin = open('미로2.txt')
-
+sys.stdin = open("미로2_input.txt","r")
 T = 10
-for tc in range(1, T+1):
-    n = int(input())
-    arr = [list(map(int, input())) for _ in range(100)]
-    visited = [[0 for _ in range(100)] for _ in range(100)]
-
-    for i in range(100):
-        for j in range(100):
-            if arr[i][j] == 2:
-                x, y = i, j
-
-    print('#{} {}'.format(tc, bfs(x, y)))
+N = 100
+for tc in range(T):
+    no = int(input())
+    maze = [list(map(int, input())) for i in range(N)] # 미로를 중첩리스트로 저장
+    visited = [[0 for _ in range(N)] for _ in range(N)]
+    sy, sx = findStart(maze)
+    print('#{} {}'.format(tc+1, bfs(sx, sy)))

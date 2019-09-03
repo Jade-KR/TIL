@@ -49,12 +49,25 @@ for tc in range(1, T+1):
                 cnt += 1
 
 
-    print(result)
-    print('#{} {} '.format(tc, cnt), end="")
+
 
     for i in range(len(cmp)-1):
         if cmp[i] > cmp[i+1]:
             cmp[i], cmp[i+1] = cmp[i+1], cmp[i]
             result[i], result[i+1] = result[i+1], result[i]
+        if cmp[i] == cmp[i+1]:
+            if result[i][0] > result[i+1][0]:
+                result[i], result[i+1] = result[i+1], result[i]
 
-    for i, j in result:
+    print(result)
+
+    # final = []
+    #
+    # print('#{} {}'.format(tc, cnt), end=" ")
+    # for k in result:
+    #     for l in range(2):
+    #         final.append(k[l])
+    #
+    # for k in final:
+    #     print(k, end=" ")
+    # print()
