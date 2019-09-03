@@ -20,7 +20,7 @@ for tc in range(1, T+1):
         tmp2 = str(i)
         chk = 0
         for j in range(len(tmp2)-1):
-            if tmp2[j] > tmp2[j+1]:
+            if tmp2[j] > tmp2[j+1]: #중요
                 chk = 1
                 break
         if not chk:
