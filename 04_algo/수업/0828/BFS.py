@@ -6,10 +6,10 @@ def bfs(v):
     while len(queue) != 0:
         t = queue.pop(0)
         for w in range(1, V+1):
-            if G[v][w] == 1 and visited[w] == 0:
+            if G[t][w] == 1 and visited[w] == 0:
                 queue.append(w)
-                # visited[w] = 1
-                visited[w] = visited[t] + 1 #떨어진 거리
+                visited[w] = 1
+                # visited[w] = visited[t] + 1 #떨어진 거리
 
                 print(w, end=" ")
 
