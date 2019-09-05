@@ -20,7 +20,7 @@ def snail(arr):
 
 
 import sys
-sys.stdin = open('prac.txt')
+sys.stdin = open('dfs.txt')
 
 T = int(input())
 for tc in range(1, T+1):

@@ -10,6 +10,7 @@ def bfs(v):
                 queue.append(w)
                 # visited[w] = 1
                 visited[w] = visited[t] + 1 #떨어진 거리
+
                 print(w, end=" ")
 
 import sys

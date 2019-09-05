@@ -20,7 +20,7 @@ def bfs(x, y):
     return 0  # 출구에 가지 못하고 모든 칸 방문
 
 import sys
-sys.stdin = open("미로의거리_input.txt","r")
+sys.stdin = open("미로의거리.txt")
 T = int(input())
 for tc in range(T):
     N = int(input())

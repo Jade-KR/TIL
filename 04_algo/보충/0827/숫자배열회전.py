@@ -15,6 +15,7 @@ for tc in range(1, T+1):
             for k in range(N):
                 arr[i][k][N-1-j] = arr[i-1][j][k]
 
+
     #면, 행, 열
     print('#{}'.format(tc))
     for j in range(N):
