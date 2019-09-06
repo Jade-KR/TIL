@@ -2,7 +2,6 @@ def PrintArr(n):
     for i in range(n):
         print(arr[i], end= " ")
     print()
-
 def perm(n, k):
     if k == n:
         PrintArr(n)
@@ -12,9 +11,6 @@ def perm(n, k):
             perm(n, k+1)
             arr[k], arr[i] = arr[i], arr[k]
 
-
-
-
-
-arr = [1, 2, 3]
+arr = [1,2,3]
 perm(3, 0)
+

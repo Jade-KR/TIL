@@ -3,14 +3,13 @@ def bfs(v):
     q.append(v)
     visited[v] = 1
 
-    while len(q) != 0:
+    while q:
         t = q.pop(0)
         for w in range(1, V+1):
             if adj[t][w] == 1 and visited[w] == 0:
                 q.append(w)
                 visited[w] = visited[t] + 1
-                if w == G:
-                    print('#{} {}'.format(tc, visited[w]-1))
+
 
 import sys
 sys.stdin = open('prac.txt')
@@ -30,3 +29,8 @@ for tc in range(1, T+1):
 
     bfs(S)
 
+    result = visited[G] - 1
+    if result == -1:
+        result = 0
+
+    print('#{} {}'.format(tc, result))
