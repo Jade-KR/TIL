@@ -1,4 +1,4 @@
-def inorder_traverse(T): #수정
+def inorder_traverse(T):
     if T:
         inorder_traverse(arr[T][0])
         print(data[T-1][1], end= '')
@@ -24,7 +24,7 @@ for tc in range(1, T+1):
             arr[i + 1][2] = int(i + 1)
         else:
             arr[i + 1][2] = int(i + 1)
-
+    print(arr)
     visit = [0 for _ in range(N + 1)]
     print('#{}'.format(tc), end=" ")
     inorder_traverse(1)
