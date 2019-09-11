@@ -1,7 +1,7 @@
 def inorder(T): #수정
     if T:
         inorder(tree[T][0])
-        a +=
+        a += data[T-1][1]
         # tmp.append(data[T-1][1])
         inorder(tree[T][1])
 
