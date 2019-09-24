@@ -1,4 +1,4 @@
-def perm(arr=[]):
+def perm(arr=[], cur):
     global sum_v, cnt, min_v
     if len(arr) == N:
         cnt = 0
@@ -28,6 +28,6 @@ for tc in range(1, T+1):
     cnt = 0
     min_v = 987654321
     s = 0
-    perm(arr)
+    perm(arr, 0)
 
     print('#{} {}'.format(tc, min_v))
