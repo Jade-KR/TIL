@@ -8,6 +8,27 @@
     <p>글 생성 시각: {{ article.created_at|date:"SHORT_DATE_FORMAT" }}</p>
     <p>글 수정 시각: {{ article.updated_at|date:"M, j, Y" }}</p>
     <hr>
+    <h3>댓글</h3>
+    <!-- {% for comment in article.comments.all %}
+        <p>{{ comment.id }} : {{ comment.content }}</p>
+    {% endfor %} -->
+    {% for comment in comments %}
+        <p>{{ comment.id }} : {{ comment.content }}</p>
+        <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method='POST'>
+            {% csrf_token %}
+            <input type="submit" value='댓글 삭제' class="btn btn-primary">
+        </form>
+    {% endfor %}
+    <hr>
+
+    <form action="{% url 'articles:comments_create' article.pk %}" method='POST'>
+        {% csrf_token %}
+        <label for="content">Comment</label><br>
+        <textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+        <input type="submit" value='댓글 작성' class='btn btn-warning'>
+    </form>
+
+    <hr>
     <form action="{% url 'articles:delete' article.pk %}" method=POST>
         {% csrf_token %}
         <input type="submit" value='글 삭제'>

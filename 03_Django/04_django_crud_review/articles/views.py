@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.exceptions import ValidationError
-from .models import Article
+from .models import Article, Comment
 from IPython import embed
 
 def index(request):
@@ -53,23 +53,25 @@ def create(request):
     # Article.objects.create(title=title, content=content)
     return redirect(f'/articles/{article.pk}/')
     '''
-def detail(request, pk):
-    article = Article.objects.get(pk=pk)
+def detail(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    comments = article.comments.all()
     context = {
         'article': article,
+        'comments': comments,
     }
     return render(request, 'articles/detail.html', context)
 
-def delete(request, pk):
-    article = Article.objects.get(pk=pk)
+def delete(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
     if request.method == 'POST':
         article.delete()
         return redirect('articles:index')
     else:
         return redirect('articles:detail', article.pk)
 
-def update(request, pk):
-    article = Article.objects.get(pk=pk)
+def update(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
     if request.method == 'POST':
         article.title = request.POST.get('title')
         article.content = request.POST.get('content')
@@ -94,3 +96,20 @@ def update(request, pk):
     # else:
     #     article.save()
     #     return redirect(f'/articles/{article.pk}/')
+
+def comments_create(request, article_pk):
+    article = Article.objects.get(pk=article_pk) # 게시글을 가져옴
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        comment = Comment(article=article, content=content)
+        comment.save()
+
+        return redirect('articles:detail', article_pk)
+    else:
+        return redirect('articles:detail', article_pk)
+
+def comments_delete(request, article_pk, comment_pk):
+    if request.method == 'POST':
+        comment = Comment.objects.get(pk=comment_pk)
+        comment.delete()
+    return redirect('articles:detail', article_pk)
