@@ -1,0 +1,10 @@
+{% extends 'articles/base.html' %}
+
+{% block body %}
+    <form action="" method='POST'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value='글 작성'>
+    </form>
+    <a href="{% url 'articles:index' %}">[메인 페이지]</a>
+{% endblock %}
