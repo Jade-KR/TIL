@@ -6,7 +6,7 @@ def com(dep=0):
         return
     for i in range(dep, len(a)):
         arr.append(a[i])
-        com(i)
+        com(i+1)
         arr.pop()
 
 a = [1, 2, 3, 4, 5, 6 ,7, 8, 9, 10]
