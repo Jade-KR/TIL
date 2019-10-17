@@ -14,14 +14,21 @@
     </form>
     <hr>
     <p><b>댓글 목록</b></p>
-    {% for comment in article.comment_set.all %}
-        <p>{{ comment.id }} : {{ comment.content }}</p>
+    <p><b>현재까지 댓글 수: {{ comments.count }}</b></p>
+    {% for comment in comments %}
+        <p>댓글({{ forloop.revcounter }}) : {{ comment.content }}</p>
+        <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method='POST'>
+            {% csrf_token %}
+            <input type="submit" value="댓글 삭제">
+        </form>
+    {% empty %}
+        <p><b>댓글을 작성하세요</b></p>
     {% endfor %}
 
     <form action="{% url 'articles:comments_create' article.pk %}" method="POST">
         {% csrf_token %}
         {{ comment_form.as_p }}
-        <input type="submit" value="댓글 작성">
+        <input type="submit" value="댓글 작성" class="btn btn-dark">
     </form>
 {% endblock %}
 
