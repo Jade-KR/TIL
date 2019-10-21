@@ -1,16 +1,29 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 from .models import Article, Comment
 from .forms import ArticleForm, CommentForm
 from IPython import embed
 
 def index(request):
+    # embed()
+    #1. session 정보에서 visits_num 이라는 키로 접근해 값을 가져옴
+    # 해당하는 키가 없으면 0을 가져옴
+    visits_num = request.session.get('visits_num', 0)
+
+    #2. 가져온 값을 session에 'visits_num' 이라는 새로운 값으로 1씩 증가
+    request.session['visits_num'] = visits_num + 1
+
+    #3. session data를 수정하면 장고는 수정한 내용을 알 수 없어서 작성하는 코드
+    request.session.modified = True
+    # embed()
     articles = Article.objects.all() #articles에 전체 목록을 다 가져옴
     context = {
-        'articles': articles,
+        'articles': articles, 'visits_num': visits_num,
     }
     return render(request, 'articles/index.html', context)
 
+@login_required
 def create(request):
     """
 
@@ -49,10 +62,12 @@ def detail(request, article_pk): # urls 파일에 따라서 인자 이름 정하
 
 @require_POST
 def delete(request, article_pk):
-    article = get_object_or_404(Article, pk=article_pk)
-    article.delete()
+    if request.user.is_authenticated:
+        article = get_object_or_404(Article, pk=article_pk)
+        article.delete()
     return redirect('articles:index') # redirect -> GET 요청
 
+@login_required
 def update(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
     if request.method == 'POST':
@@ -87,15 +102,17 @@ Update 로직
 @require_POST
 def comments_create(request, article_pk):
     # article = get_object_or_404(Article, pk=article_pk)
-    comment_form = CommentForm(request.POST)
-    if comment_form.is_valid():
-        comment = comment_form.save(commit=False) # 아직 DB에 반영안됨.
-        comment.article_id = article_pk
-        comment.save()
+    if request.user.is_authenticated:
+        comment_form = CommentForm(request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False) # 아직 DB에 반영안됨.
+            comment.article_id = article_pk
+            comment.save()
     return redirect('articles:detail', article_pk)
 
 @require_POST
 def comments_delete(request, article_pk, comment_pk):
-    comment = get_object_or_404(Comment, pk=comment_pk)
-    comment.delete()
+    if request.user.is_authenticated:
+        comment = get_object_or_404(Comment, pk=comment_pk)
+        comment.delete()
     return redirect('articles:detail', article_pk)
