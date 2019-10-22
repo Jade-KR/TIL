@@ -5,14 +5,14 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import update_session_auth_hash
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
-from .forms import CustomUserChangeForm
+from .forms import CustomUserChangeForm, CustomUserCreationForm
 from IPython import embed
 
 def signup(request):
     if request.user.is_authenticated:
         return redirect('articles:index')
     elif request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         # embed()
         if form.is_valid():
             user = form.save()
@@ -20,7 +20,7 @@ def signup(request):
             # embed()
             return redirect('articles:index')
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     
     context = {'form': form, }
     return render(request, 'accounts/auth_form.html', context)

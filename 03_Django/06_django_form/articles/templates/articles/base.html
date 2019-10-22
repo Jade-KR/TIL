@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% bootstrap_css %}
+    {% load gravatar %}
     <style>
         div > h3 {
             color: powderblue;
@@ -17,7 +18,9 @@
 <body>
     <div class="container">
         {% if user.is_authenticated %}
-        <h3>Hello, {{ user.username }} |
+        
+        <h3> <img src="https://s.gravatar.com/avatar/{{ user.email|makemd5 }}?s=80&d=robohash" alt="">
+            Hello, {{ user.username }} |
             <a href="{% url 'accounts:logout' %}">LOGOUT</a> |
             <a href="{% url 'accounts:update' %}">USER UPDATE</a> |
             <a href="{% url 'accounts:change_password' %}">CHANGE PASSWORD</a> |
