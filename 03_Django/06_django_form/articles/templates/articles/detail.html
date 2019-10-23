@@ -1,6 +1,10 @@
 {% extends 'articles/base.html' %}
 
 {% block body %}
+    <h2>DETAIL</h2>
+    <hr>
+    {% include "articles/_follow.html" %}
+    <hr>
     <p>글 번호: {{ article.pk }}</p>
     <p>제목: {{ article.title }}</p>
     <p>내용: {{ article.content }}</p>
