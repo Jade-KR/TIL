@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .todo-list {
+      display: inline-block;
+      width: 33%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="todo-list">
+      <h2>취업 준비</h2>
+      <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+      <button v-on:click="addTodo">+</button>
+      <li v-for="todo in todos" v-bind:key="todo.id">
+        <span>{{ todo.content }}</span>
+        <button v-on:click="removeTodo(todo.id)">x</button>
+      </li>
+    </div>
+    <div class="todo-list">
+      <h2>SSAFY</h2>
+      <input type="text" v-model="secTodo" v-on:keyup.enter="add2Todo">
+      <button v-on:click="add2Todo">+</button>
+      <li v-for="todo in todos2" v-bind:key="todo.id">
+        <span>{{ todo.content }}</span>
+        <button v-on:click="removeTodo2(todo.id)">x</button>
+      </li>
+    </div>
+    <div class="todo-list">
+      <h2>기타</h2>
+      <input type="text" v-model="thrTodo" v-on:keyup.enter="add3Todo">
+      <button v-on:click="add3Todo">+</button>
+      <li v-for="todo in todos3" v-bind:key="todo.id">
+        <span>{{ todo.content }}</span>
+        <button v-on:click="removeTodo3(todo.id)">x</button>
+      </li>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        todos: [],
+        todos2: [],
+        todos3: [],
+        newTodo: '',
+        secTodo: '',
+        thrTodo: '',
+      },
+      methods: {
+				addTodo: function() {
+          if (this.newTodo.length !== 0) {
+            this.todos.push({
+              id: Date.now(),
+              content: this.newTodo,
+              completed: false,
+            })
+            this.newTodo = ''
+          }
+				},
+        add2Todo: function() {
+          if (this.secTodo.length !== 0) {
+            this.todos2.push({
+              id: Date.now(),
+              content: this.secTodo,
+              completed: false,
+            })
+            this.secTodo = ''
+          }
+				},
+        add3Todo: function() {
+          if (this.thrTodo.length !== 0) {
+            this.todos3.push({
+              id: Date.now(),
+              content: this.thrTodo,
+              completed: false,
+            })
+            this.thrTodo = ''
+          }
+				},
+        
+				// 어제는 clearCompleted로 한번에 완료된 목록 삭제
+				// 이번에는 특정 todo를 삭제!
+				removeTodo: function(todoId) {
+          this.todos = this.todos.filter((todo) => {
+            return todo.id !== todoId
+          })
+				},
+        removeTodo2: function(todoId2) {
+          this.todos2 = this.todos2.filter((todo) => {
+            return todo.id !== todoId2
+          })
+				},
+        removeTodo3: function(todoId3) {
+          this.todos3 = this.todos3.filter((todo) => {
+            return todo.id !== todoId3
+          })
+				},
+      }
+    })
+  </script>
+</body>
+</html>
