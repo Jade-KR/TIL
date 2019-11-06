@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TODO MINI PROCJECT</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Todo App</h1>
+    <my-todo-list category="하고 싶은 일"></my-todo-list>
+    <my-todo-list category="해야 하는 일"></my-todo-list>
+  </div>
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    Vue.component('my-todo-list', {
+      template: `
+        <div id="my-todo-list">
+          <h2 v-bind:style={color:titleColor}>{{ category }}</h2>
+          <input type="text" v-model="newTodo" @keyup.enter="addTodo">
+          <button @click="addTodo">AddTodo</button>
+          <ul>
+            <li v-for="todo in todos">
+              {{ todo.content }}
+              {{ todo.todayDate }}
+              <button @click="removeTodo(todo.id)" >Remove</button>
+            </li>
+          </ul>
+        </div>
+      `,
+      props:{
+        category: String,
+      },
+      data: function() {
+      return {
+        todos: [],
+        newTodo: '',
+        titleColor: "powderblue"
+      }
+    },
+    methods:{
+        addTodo: function() {
+          if(this.newTodo.length !== 0) {
+            this.todos.push({
+              id: Date.now(),
+              content: this.newTodo,
+              todayDate: Date()
+            })
+            this.newTodo = ''
+          }
+        },
+        removeTodo:function(todoId){
+          this.todos = this.todos.filter((todo) => {
+            return todo.id !== todoId
+          })
+        },
+      },
+    })
+  </script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+    })
+  </script>
+</body>
+</html>

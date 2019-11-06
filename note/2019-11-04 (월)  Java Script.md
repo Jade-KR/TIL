@@ -193,6 +193,8 @@ index.html - endblock 바로 위에 script 태그 넣음
 
 views.py - redirect로 되어있는 것을 json으로 응답하도록 바꿈
 
+boolean으로 표현하기 위해
+
 ```python
 from django.http import JsonResponse
 
@@ -374,6 +376,7 @@ from django.http import JsonResponse, HttpResponseBadRequest
 
 @login_required
 def like(request, article_pk):
+    # 비동기 요청이면 아래 코드를 수행하겠다.
     if request.is_ajax():
         article = get_object_or_404(Article, pk=article_pk)
         user = request.user
