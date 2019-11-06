@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc70cdcf-59b8-40eb-96c3-cf166297bc3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../note/2019-11-04 (월)  Java Script.md" beforeDir="false" afterPath="$PROJECT_DIR$/../note/2019-11-04 (월)  Java Script.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../note/2019-11-04 (월)  Vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/../note/2019-11-04 (월)  Vue.md" afterDir="false" />
-    </list>
+    <list default="true" id="bc70cdcf-59b8-40eb-96c3-cf166297bc3e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="417" />
     <option name="y" value="90" />
     <option name="width" value="1223" />
@@ -615,7 +611,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="417" y="90" width="1223" height="891" extended-state="0" />
+    <frame x="417" y="90" width="1223" height="891" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16202532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
