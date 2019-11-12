@@ -1,94 +1,65 @@
 import sys
 sys.stdin = open('prac.txt')
+
 def dfs(x, y):
-    global chk
-    chk = 0
+    visited[x][y] = 1
     for k in range(4):
         nx = x + dx[k]
         ny = y + dy[k]
-        if data[nx][ny]:
-            chk = 1
-def bfs(x, y):
-    global check, cnt, result
-    q = []
-    visited[x][y] += 1
-    q.append((x, y))
-    while len(q) != 0:
-        x, y = q.pop(0)
-        for k in range(4):
-            nx = x + dx[k]
-            ny = y + dy[k]
-
-            if nx < 0 or nx >= N or ny < 0 or ny >= M:
-                continue
-            elif visited[nx][ny] != 0:
-                continue
-            elif visited[nx][ny] == 0 and data[nx][ny] == 0:
-                visited[x][y] += 1
-                continue
-            elif visited[nx][ny] == 0 and data[nx][ny] != 0:
-                visited[nx][ny] += 1
-                q.append((nx, ny))
-
-    cnt += 1
+        if nx < 0 or nx >= N or ny < 0 or ny >= M:
+            continue
+        elif visited[nx][ny] == 1 or data[nx][ny] == 1:
+            continue
+        visited[nx][ny] = 1
+        dfs(nx, ny)
 
 
 
-    for n in range(N):
-        for m in range(M):
-            if data[n][m] > 0:
-                data[n][m] -= visited[n][m] - 1
-            if data[n][m] < 0:
-                data[n][m] = 0
 
-    c1 = 0
+def com(dep=0):
+    global data, visited, cnt, min_c
+    if len(arr) == 3:
+        for q in range(3):
+            data[arr[q][0]][arr[q][1]] = 1
 
-    for n in range(N):
-        for m in range(M):
-            if data[n][m]:
-                c1 += 1
-    if c1 == 0:
-        result = 0
-        check = 0
+        for o in range(N):
+            for p in range(M):
+                if data[o][p] == 2:
+                    visited = [[0] * M for _ in range(N)]
+                    cnt = 0
+                    cnt2 = 0
+                    dfs(o, p)
+                    for a in range(N):
+                        for b in range(M):
+                            if visited[a][b] == 0:
+                                cnt += 1
+                            if data[a][b] == 1:
+                                cnt2 += 1
+                    if min_c < cnt:
+                        min_c = cnt - cnt2
+        return
+    if dep == len(wall):
+        return
+    for i in range(dep, len(wall)):
+        arr.append(wall[i])
+        com(i+1)
+        arr.pop()
 
 N, M = map(int, input().split())
 data = [list(map(int, input().split())) for _ in range(N)]
-visited = [[0]*M for _ in range(N)]
-cnt = 0
-flag = 0
-check = 1
-x = 0
-y = 0
+visited = [[0]* M for _ in range(N)]
+wall = []
+arr = []
+min_c = 0
 
 dx = [1, -1, 0, 0]
 dy = [0, 0, 1, -1]
 
+for a in range(N):
+    for b in range(M):
+        if data[a][b] == 0:
+            wall.append([a, b])
 
-while check:
-    for i in range(N):
-        if flag == 1:
-            break
-        for j in range(M):
-            if data[i][j] != 0:
-                x = i
-                y = j
-                flag = 1
-                break
-    visited = [[0] * M for _ in range(N)]
-    bfs(x, y)
-    flag = 0
+com()
 
-    for n in range(N):
-        if flag == 1:
-            break
-        for m in range(M):
-            if data[n][m]:
-                dfs(n, m)
-                if chk == 0:
-                    check = 0
-                    result = cnt
-                    flag = 1
-                    break
-    flag = 0
-
-print(result)
+print(min_c)
