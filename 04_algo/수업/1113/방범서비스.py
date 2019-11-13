@@ -1,6 +1,6 @@
 import sys
 import collections
-sys.stdin = open('prac.txt')
+sys.stdin = open('방범서비스.txt')
 
 def bfs(x, y):
     q = collections.deque()

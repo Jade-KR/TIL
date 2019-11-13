@@ -19,11 +19,10 @@ def powerset(n, k):     # n: 원소의 갯수, k: 현재 depth
         st1 = sorted(st1)
         st2 = sorted(st2)
         # 3명 계단에 있으면 기다려야함.
-        while tm < 21:
-            for q in st1:
-                if q >= tm:
-                    tmp.append(q)
-            tm += 1
+        if len(st1) > 3:
+            while st1:
+
+                tm += 1
 
         tm = 0
 
