@@ -30,13 +30,6 @@ def powerset(n, dep):
                 g1.append(arr[i])
             else:
                 g2.append(arr[i])
-        # validator = 0
-        # for i in g1:
-        #     for j in range(1, info[i-1][0]+1):
-        #         if info[i-1][j] in g2:
-        #             validator = 1
-        #
-        # if validator == 1:
         if len(g1) != 0 and len(g1) != N:
             if g1:
                 visited = [1] * (N + 1)
