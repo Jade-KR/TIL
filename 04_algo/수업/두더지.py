@@ -1,13 +1,6 @@
 import sys
 sys.stdin = open('두더지.txt')
 
-n = int(input())
-data = [list(map(int, input().split())) for _ in range(n)]
-visited = [[0 for _ in range(n)] for _ in range(n)]
-dx = [1, -1, 0, 0]
-dy = [0, 0, -1, 1]
-
-
 def dfs(x, y):
     for i in range(4):
         new_x = x + dx[i]
@@ -22,6 +15,15 @@ def dfs(x, y):
         visited[new_y][new_x] = 1
 
         dfs(new_x, new_y)
+
+n = int(input())
+data = [list(map(int, input().split())) for _ in range(n)]
+visited = [[0 for _ in range(n)] for _ in range(n)]
+dx = [1, -1, 0, 0]
+dy = [0, 0, -1, 1]
+
+
+
 
 cnt = 0
 for i in range(n):

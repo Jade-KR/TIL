@@ -1,14 +1,15 @@
-def comb(dep=0):
-    if len(arr) == 3:
+def perm(arr=[]):
+    if len(arr) == 4:
         print(arr)
-        return
-    if dep == len(a):
-        return
-    for i in range(dep, len(a)):
-        arr.append(a[i])
-        comb(i+1)
-        arr.pop()
+    for i in range(4):
+        if vl[i] == 0:
+            vl[i] = 1
+            arr.append(data[i])
+            perm(arr)
+            arr.pop()
+            vl[i] = 0
 
-a = [1, 2, 3, 4, 5]
-arr= []
-comb()
+
+data = [1, 2, 3, 4]
+vl = [0]*4
+perm()
