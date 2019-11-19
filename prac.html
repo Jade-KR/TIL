@@ -8,17 +8,38 @@
 </head>
 <body>
   <div id="app">
-    <input type="text" v-model="newUrl">
-    <a :href="newUrl">Go!</a>
+    <select v-model="count">
+      <option v-for="number in numbers" :value="number">{{ number }}</option>
+    </select>
+    <button v-on:click="getDogImage">Get {{ count }} Dogs!</button>
+    <br>
+    <div v-for="image in images">
+      <img v-bind:src="image">
+    </div>
   </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
   <script>
-  const app = new Vue({
-    el: '#app',
-    data: {
-      newUrl: '',
-    },
-  })
+    const app = new Vue({
+      el: '#app',
+      data: {
+        images: [],
+        numbers: 9,
+        count: 1,
+      },
+      methods: {
+        getDogImage: function() {
+          const URL = `https://dog.ceo/api/breeds/image/random/${this.count}`
+          axios.get(URL)
+          // 함수 내에 또 다른 함수라서 화살표함수 사용해야함.
+          .then(res => {
+            this.images = res.data.message
+          })
+        }
+      }
+    })
   </script>
 </body>
 </html>
