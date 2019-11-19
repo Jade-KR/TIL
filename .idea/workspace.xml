@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32a89a6-851d-4f1d-86fa-4f87044b26a8" name="Default Changelist" comment="1003">
+      <change afterPath="$PROJECT_DIR$/04_algo/study/불!.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_algo/study/불!.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/덕.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/덕.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.txt" beforeDir="false" afterPath="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todoback/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todoback/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todoback/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todoback/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-back/todos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/components/LoginForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/components/LoginForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/views/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/07_Vue/05_vue_component_with_drf/todo-front/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/2019-11-18 (월)  django&amp;vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/note/2019-11-18 (월)  django&amp;vue.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,15 +24,66 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1725412191">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.71428573">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1425">
-                  <caret line="95" column="22" lean-forward="true" selection-end-line="97" selection-end-column="13" />
+                <state relative-caret-position="228">
+                  <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/04_algo/study/불!.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/04_algo/study/불!.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -45,11 +106,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.txt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
+                <state relative-caret-position="133">
                   <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
                 </state>
               </provider>
@@ -75,14 +136,16 @@
         <option value="$PROJECT_DIR$/04_algo/weakness/prac.py" />
         <option value="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.txt" />
         <option value="$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py" />
+        <option value="$PROJECT_DIR$/04_algo/study/불!.py" />
+        <option value="$PROJECT_DIR$/04_algo/study/불!.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="766" />
-    <option name="y" value="23" />
-    <option name="width" value="914" />
-    <option name="height" value="957" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="709" />
+    <option name="y" value="79" />
+    <option name="width" value="950" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,47 +155,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="sw문제" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="weakness" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="보충" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TIL" type="462c0819:PsiDirectoryNode" />
-              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
-              <item name="보충" type="462c0819:PsiDirectoryNode" />
-              <item name="1113" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -168,6 +190,28 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TIL" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TIL" type="462c0819:PsiDirectoryNode" />
+              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TIL" type="462c0819:PsiDirectoryNode" />
+              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +231,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.게리맨더링">
+  <component name="RunManager" selected="Python.cctv">
     <configuration name="평강조합" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="덕" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -298,11 +342,9 @@
       <item itemvalue="Python.평강조합" />
       <item itemvalue="Python.queen" />
       <item itemvalue="Python.prac" />
-      <item itemvalue="Python.게리맨더링" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.게리맨더링" />
         <item itemvalue="Python.prac" />
         <item itemvalue="Python.queen" />
         <item itemvalue="Python.평강조합" />
@@ -332,10 +374,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="846" y="0" width="834" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="709" y="79" width="950" height="899" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.30210772" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3015351" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -353,6 +394,9 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1003" />
@@ -523,12 +567,6 @@
     <entry file="file://$PROJECT_DIR$/04_algo/weakness/평강순열.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/04_algo/weakness/prac.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/04_algo/weakness/dfs.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/04_algo/weakness/부분집합.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -546,20 +584,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py" />
+    <entry file="file://$PROJECT_DIR$/04_algo/weakness/dfs.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_algo/weakness/prac.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="267" selection-start-line="267" selection-end-line="267" />
+        <state relative-caret-position="228">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/04_algo/보충/1113/게리맨더링.py">
+    <entry file="file://$PROJECT_DIR$/04_algo/study/불!.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="22" lean-forward="true" selection-end-line="97" selection-end-column="13" />
+        <state relative-caret-position="76">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_algo/study/불!.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
         </state>
       </provider>
     </entry>

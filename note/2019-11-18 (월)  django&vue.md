@@ -24,8 +24,19 @@ https://jwt.io/
 
 # 수업 vue router
 
-- 특정 route와 component를 매칭시켜준다.
-  - 
+- 특정 router와 component를 매칭시켜준다.
+
+
+
+cors = 도메인/포트가 다른 서버의 자원을 요청하는 행위 (cors를 browser에서 보안을 위해 막음)
+
+CORS 정책을 통해 서버에서 허용해주면 가능함.
+
+
+
+서버에서 cross-origin HTTP 요청 허가 (whitelisting)
+
+
 
 
 
