@@ -55,9 +55,9 @@ while chk == 0:
     if cnt >= 2:
         chk = 1
         break
+    if cnt == 0:
+        year = 0
+        break
     year += 1
-
-if cnt == 1:
-    year = 0
 
 print(year)
