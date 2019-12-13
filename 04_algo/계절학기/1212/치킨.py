@@ -2,7 +2,7 @@ import sys
 sys.stdin = open('치킨.txt')
 
 def comb(dep=0):
-    global ans, tmp
+    global ans
     if len(arr) == M:
         tmp = 0
         for w in range(hc):
