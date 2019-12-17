@@ -6,7 +6,6 @@ def bfs(x, y, fd, ld, out):
     global cnt, ans, change, K
 
     while len(q):
-        cnt += 1
         if cnt == K:
             cnt = 0
             ans += 1
@@ -153,6 +152,7 @@ def bfs(x, y, fd, ld, out):
                 visited[nx][ny] = nfd
                 q.append((nx, ny, nld))
 
+        cnt += 1
 
 N, K = map(int, input().split())
 board = [list(map(int, input().split())) for _ in range(N)]

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d32a89a6-851d-4f1d-86fa-4f87044b26a8" name="Default Changelist" comment="1003">
-      <change afterPath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_algo/계절학기/1216/연습.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py" beforeDir="false" afterPath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.txt" beforeDir="false" afterPath="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
+            <state relative-caret-position="-1772">
+              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1216/연습.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -28,6 +38,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
               <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1213/퇴사.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -74,8 +93,9 @@
         <option value="$PROJECT_DIR$/인구이동.py" />
         <option value="$PROJECT_DIR$/04_algo/계절학기/1213/인구이동.txt" />
         <option value="$PROJECT_DIR$/04_algo/계절학기/1213/인구이동.py" />
-        <option value="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.txt" />
         <option value="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py" />
+        <option value="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.txt" />
+        <option value="$PROJECT_DIR$/04_algo/계절학기/1216/연습.py" />
       </list>
     </option>
   </component>
@@ -150,6 +170,13 @@
               <item name="TIL" type="462c0819:PsiDirectoryNode" />
               <item name="04_algo" type="462c0819:PsiDirectoryNode" />
               <item name="계절학기" type="462c0819:PsiDirectoryNode" />
+              <item name="1213" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TIL" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TIL" type="462c0819:PsiDirectoryNode" />
+              <item name="04_algo" type="462c0819:PsiDirectoryNode" />
+              <item name="계절학기" type="462c0819:PsiDirectoryNode" />
               <item name="1216" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -175,7 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.새로운게임">
+  <component name="RunManager" selected="Python.연습">
     <configuration name="인구이동 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="덕" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,6 +279,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="연습" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="덕" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_algo/계절학기/1216" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_algo/계절학기/1216/연습.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -386,41 +434,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cctv" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="덕" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/04_algo/study" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/04_algo/study/cctv.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.cctv" />
       <item itemvalue="Python.치킨2" />
       <item itemvalue="Python.인구이동" />
       <item itemvalue="Python.인구이동 (1)" />
       <item itemvalue="Python.새로운게임" />
+      <item itemvalue="Python.연습" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.연습" />
         <item itemvalue="Python.새로운게임" />
         <item itemvalue="Python.인구이동 (1)" />
         <item itemvalue="Python.인구이동" />
         <item itemvalue="Python.치킨2" />
-        <item itemvalue="Python.cctv" />
       </list>
     </recent_temporary>
   </component>
@@ -447,9 +474,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="850" y="0" width="830" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23206751" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24598269" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -531,13 +557,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py</url>
-          <line>166</line>
-          <option name="timeStamp" value="115" />
+          <line>7</line>
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="118" />
+          <line>166</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/04_algo/계절학기/1216/연습.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -548,27 +579,11 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="q" language="Python" />
-        <watch expression="cnt" language="Python" />
-        <watch expression="visited" language="Python" />
-        <watch expression="nd" language="Python" />
-        <watch expression="board" language="Python" />
-        <watch expression="change" language="Python" />
-        <watch expression="ans" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
-        <expression-string>ans</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>change</expression-string>
+        <expression-string>pieces</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -578,17 +593,32 @@
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
+        <expression-string>change</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>cnt</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>nd</expression-string>
+        <expression-string>ans</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>K</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>visited</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>nd</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -602,26 +632,9 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>population</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>chicken</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/03_Django/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="117" column="8" lean-forward="true" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/04_algo/보충/1001/정식이.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -850,13 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1213/퇴사.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1209/주사위윷놀이.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -873,8 +879,15 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        <state relative-caret-position="204">
+          <caret line="309" selection-start-line="309" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1213/퇴사.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -887,8 +900,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1216/새로운게임.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
+        <state relative-caret-position="-1772">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/04_algo/계절학기/1216/연습.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
