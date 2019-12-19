@@ -15,7 +15,8 @@ visited = [[0]*N for _ in range(N)]
 q = collections.deque()
 for i in range(K):
     visited[pieces[i][0]-1][pieces[i][1]-1] = pieces[i][2]
-    q.append((pieces[i][0]-1, pieces[i][1]-1, pieces[i][2]))
+    pieces[i][0] -= 1
+    pieces[i][1] -= 1
 
 # 번호 체크하고 말 개수 체크
 while finish == 0:
@@ -27,7 +28,7 @@ while finish == 0:
         if check[z] == 1:
             continue
         else:
-            nx, ny, nfd = pieces[z][0]-1, pieces[z][1]-1, pieces[z][2]
+            nx, ny, nfd = pieces[z][0], pieces[z][1], pieces[z][2]
             x, y = nx, ny
             nld = visited[nx][ny]
             if nfd == 1:
