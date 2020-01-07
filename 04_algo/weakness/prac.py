@@ -1,15 +1,13 @@
-def perm(arr=[]):
-    if len(arr) == 4:
-        print(arr)
-    for i in range(4):
-        if vl[i] == 0:
-            vl[i] = 1
-            arr.append(data[i])
-            perm(arr)
-            arr.pop()
-            vl[i] = 0
+import sys
+sys.stdin = open('prac.txt')
 
+def comb(dep=0):
+    pass
 
-data = [1, 2, 3, 4]
-vl = [0]*4
-perm()
+T = int(input())
+for tc in range(1, T+1):
+    W, E = map(int, input().split())
+    A = [i+1 for i in range(W)]
+    arr = [0]*E
+
+    print(A)
