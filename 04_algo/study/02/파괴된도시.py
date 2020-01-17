@@ -24,6 +24,10 @@ for i in range(M):
         safe.add(city[i][0])
         safe.add(city[i][1])
 
+for i in range(1, N + 1):
+    if i not in destroyed:
+        safe.add(i)
+
 for i in range(M):
     adj[city[i][0]][city[i][1]] = 1
     adj[city[i][1]][city[i][0]] = 1
@@ -31,7 +35,6 @@ for i in range(M):
 for k in range(1, N+1):
     if k not in safe:
         q.append(k)
-
 while len(q):
     if out == 1:
         break
@@ -42,9 +45,9 @@ while len(q):
     for w in range(1, N+1):
         if adj[v][w]:
             visited[w] = 1
-
     if check == visited:
         out = 1
+        q = []
 
 
 
@@ -52,5 +55,6 @@ if out == 0:
     print(-1)
 else:
     print(cnt)
+    ans = sorted(ans)
     for b in ans:
         print(b, end=' ')
