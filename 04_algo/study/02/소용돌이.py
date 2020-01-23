@@ -1,43 +1,49 @@
 import sys
 sys.stdin = open("소용돌이.txt")
 
-r1, c1, r2, c2 = map(int, input().split())
 
+r1, c1, r2, c2 = map(int, input().split())
+positivePoint = [0]*5002
+positivePoint[0] = 1
+for i in range(5001):
+    positivePoint[i+1] = positivePoint[i] + i*8
+
+positivePoint.pop(0)
 # 출력할 범위
 a = abs(r1-r2)+1
 b = abs(c1-c2)+1
+board = [[0]*b for _ in range(a)]
+length = 1
 
-# 판의 최대 크기 만들기
-N = 2*(max(abs(r1), abs(r2), abs(c1), abs(c2)))
-board = [[0]*(N+1) for _ in range(N+1)]
-
-
-x, y = N, N
-cnt = (N+1)**2
-
-dx = [0, -1, 0, 1]
-dy = [-1, 0, 1, 0]
-change = 0
-
-# 마지막 수부터 1씩 깎으면서 0,0 으로 회오리 그리기
-while cnt > 0:
-    if 0 <= a <= 49 and 0 <= b <= 4:
-        board[x][y] = cnt
-
-    nx = x + dx[change % 4]
-    ny = y + dy[change % 4]
-
-    if nx < 0 or nx >= N+1 or ny < 0 or ny >= N+1:
-        change += 1
-    elif board[nx][ny]:
-        change += 1
-
-    x = x + dx[change % 4]
-    y = y + dy[change % 4]
-    cnt -= 1
 
 for i in range(a):
-    for j in range(b):
-        print(board[i][j], end=' ')
-    print()
+    for k in range(b):
+        ni = r1+i
+        nk = c1+k
+        point = max(abs(ni), abs(nk))
+        # ni, nk 절대값 중 큰값을 골라서 Point 찾는다.
+        # ni 값이 Point와 같은 값이고 양수일때는 point값에써 nk와 point의 차이만큼  뺀 값
+        # nk 값이 point와 같은 값이고 음수일때는 point값-(point*2) 에서 ni와 point의 차이만큼 뺀 값
+        # ni 값이 point와 같은 값이고 음수일때는 point값-(point*2)*2 에서 nk와 point의 합만큼 뺀 값
+        # nk 값이 point와 같은 값이고 양수일대는 point값-(point*2)*3 에서 ni 와 point의 합만큼 뺀 값
+        if ni == point:
+            board[i][k] = positivePoint[point] - (point-nk)
+            if length < len(str(board[i][k])):
+                length = len(str(board[i][k]))
+        elif -ni == point:
+            board[i][k] = (positivePoint[point]-(point*2)*2) - (point+nk)
+            if length < len(str(board[i][k])):
+                length = len(str(board[i][k]))
+        elif -nk == point:
+            board[i][k] = (positivePoint[point]-(point*2)) - (point-ni)
+            if length < len(str(board[i][k])):
+                length = len(str(board[i][k]))
+        elif nk == point:
+            board[i][k] = (positivePoint[point]-((point*2)*3) - (point+ni))
+            if length < len(str(board[i][k])):
+                length = len(str(board[i][k]))
 
+for x in range(a):
+    for y in range(b):
+        print('{}{}'.format((' '*(length-len(str(board[x][y])))), board[x][y]), end=" ")
+    print()

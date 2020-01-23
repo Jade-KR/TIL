@@ -1,49 +1,48 @@
 import sys
-sys.stdin = open("소용돌이.txt")
+sys.stdin = open('거짓말.txt')
+def party(i):
+    global cnt
+    for j in range(len(party_peoples[i])):
+        if union(party_peoples[i][j]) == -1:
+            return
+    cnt += 1
+
+def union(num):
+    if relationship[num] == -1:
+        return -1
+    elif relationship[num] == num:
+        return num
+    else:
+        return union(relationship[num])
 
 
-r1, c1, r2, c2 = map(int, input().split())
-positivePoint = [0]*5002
-positivePoint[0] = 1
-for i in range(5001):
-    positivePoint[i+1] = positivePoint[i] + i*8
 
-positivePoint.pop(0)
-# 출력할 범위
-a = abs(r1-r2)+1
-b = abs(c1-c2)+1
-board = [[0]*b for _ in range(a)]
-length = 1
+def find_union(a, b):
+    if union(a) < union(b):
+        relationship[b] = union(a)
+    else:
+        relationship[a] = union(b)
 
 
-for i in range(a):
-    for k in range(b):
-        ni = r1+i
-        nk = c1+k
-        point = max(abs(ni), abs(nk))
-        # ni, nk 절대값 중 큰값을 골라서 Point 찾는다.
-        # ni 값이 Point와 같은 값이고 양수일때는 point값에써 nk와 point의 차이만큼  뺀 값
-        # nk 값이 point와 같은 값이고 음수일때는 point값-(point*2) 에서 ni와 point의 차이만큼 뺀 값
-        # ni 값이 point와 같은 값이고 음수일때는 point값-(point*2)*2 에서 nk와 point의 합만큼 뺀 값
-        # nk 값이 point와 같은 값이고 양수일대는 point값-(point*2)*3 에서 ni 와 point의 합만큼 뺀 값
-        if ni == point:
-            board[i][k] = positivePoint[point] - (point-nk)
-            if length < len(str(board[i][k])):
-                length = len(str(board[i][k]))
-        elif -ni == point:
-            board[i][k] = (positivePoint[point]-(point*2)*2) - (point+nk)
-            if length < len(str(board[i][k])):
-                length = len(str(board[i][k]))
-        elif -nk == point:
-            board[i][k] = (positivePoint[point]-(point*2)) - (point-ni)
-            if length < len(str(board[i][k])):
-                length = len(str(board[i][k]))
-        elif nk == point:
-            board[i][k] = (positivePoint[point]-((point*2)*3) - (point+ni))
-            if length < len(str(board[i][k])):
-                length = len(str(board[i][k]))
+N, M = map(int, input().split())
 
-for x in range(a):
-    for y in range(b):
-        print('{}{}'.format((' '*(length-len(str(board[x][y])))), board[x][y]), end=" ")
-    print()
+truth_peoples = list(map(int, input().split()))[1:]
+party_peoples = [list(map(int, input().split()))[1:] for _ in range(M)]
+
+
+relationship = [i for i in range(N + 1)]
+# 진실을 알고 있는 사람은 -1 로 바까줌
+for truth in truth_peoples:
+    relationship[truth] = -1
+
+# 파티에 참석한 사람들은 서로 관계가 있으므로 작은 넘버의 수로 표시
+for i in range(M):
+    for j in range(len(party_peoples[i]) - 1):
+        for k in range(j + 1, len(party_peoples[i])):
+            find_union(party_peoples[i][j], party_peoples[i][k])
+
+#과장을 할 수 있는 파티에서는 과장(cnt)하기
+cnt = 0
+for i in range(M):
+    party(i)
+print(cnt)
