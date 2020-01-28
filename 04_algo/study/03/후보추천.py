@@ -8,7 +8,7 @@ candidate = list(map(int, input().split()))
 frame = [[0, 0, 0]]*N
 ans = []
 while cnt < cntVote:
-    # 후보 번호, 투표 순서, 투표
+    # 후보 번호, 투표 순서, 투표 수
     tmp = [candidate[cnt], cnt, 1]
     checkEmpty = 0
     # 사진 틀이 비었을 때
