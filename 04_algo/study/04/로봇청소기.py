@@ -71,16 +71,23 @@ while finish == 0:
     changed = 0
     visited[r][c] = 1
     for a in range(4):
+        # 방향 설정.
         d = setDirection(d)
+        # 왼쪽 방향 보기.
         setWay(r, c, d)
+        # 청소 시작.
         active(newHeight, newWidth, d)
+        # 청소가 됐으면 다시 처음부터.
         if changed == 1:
             break
+        # 청소 실패했으면.
     if changed == 0:
+        # 방향을 유지하고 2칸 후진.
         back(r, c, d)
         r = newHeight
         c = newWidth
 
+# 청소한 곳 탐색.
 for i in range(N):
     for j in range(M):
         if visited[i][j] == 1:
