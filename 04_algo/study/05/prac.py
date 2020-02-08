@@ -48,20 +48,20 @@ def bfs(x, y):
                         q.append((nx, ny, NK+1, 0, chance))
 
                     elif bridge[nx][ny] == 0 and danger == 0 and chance == 1: #다리가 없고 안전할 때
-                        NK = checkTime(NK, M)
+                        NNK = checkTime(NK, M)
                         cb = checkBuild(nx, ny)
                         # 오작교가 교차하는 곳인지 체크
                         if cb == 1:
-                            visited[nx][ny] = NK
+                            visited[nx][ny] = NNK
                             chance = 0
-                            q.append((nx, ny, NK+1, 1, chance))
+                            q.append((nx, ny, NNK+1, 1, chance))
 
                     elif bridge[nx][ny] > 1 and danger == 0: #주기가 정해진 다리가 있고 안전할때
-                        NK = checkTime(NK, bridge[nx][ny])
+                        NNK = checkTime(NK, bridge[nx][ny])
                         cb = checkBuild(nx, ny)
                         if cb == 1:
-                            visited[nx][ny] = NK
-                            q.append((nx, ny, NK+1, 1, chance))
+                            visited[nx][ny] = NNK
+                            q.append((nx, ny, NNK+1, 1, chance))
 
                 elif visited[nx][ny]:
                     if visited[nx][ny] >= NK+1:
@@ -72,6 +72,21 @@ def bfs(x, y):
                             visited[nx][ny] = NK
                             q.append((nx, ny, NK+1, 0, chance))
 
+                        elif bridge[nx][ny] == 0 and danger == 0 and chance == 1:  # 다리가 없고 안전할 때
+                            NNK = checkTime(NK, M)
+                            cb = checkBuild(nx, ny)
+                            # 오작교가 교차하는 곳인지 체크
+                            if cb == 1:
+                                visited[nx][ny] = NNK
+                                chance = 0
+                                q.append((nx, ny, NNK + 1, 1, chance))
+
+                        elif bridge[nx][ny] > 1 and danger == 0:  # 주기가 정해진 다리가 있고 안전할때
+                            NNK = checkTime(NK, bridge[nx][ny])
+                            cb = checkBuild(nx, ny)
+                            if cb == 1:
+                                visited[nx][ny] = NNK
+                                q.append((nx, ny, NNK + 1, 1, chance))
 
 
 N, M = map(int, input().split())
@@ -79,7 +94,7 @@ bridge = [list(map(int, input().split())) for _ in range(N)]
 visited = [[0]*N for _ in range(N)]
 min_m = 987654321
 c = 1
-K = 0
+K = 1
 d = 0
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
