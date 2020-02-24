@@ -11,12 +11,20 @@ def checkLine():
             d1.append(e1)
         else:
             flag += 1
+        e1 += 1
+        if flag == 1:
+            chk = 1
+
+    chk = 0
+    while chk == 0:
+        flag = 0
         if 1 <= e2 <= N - y:
             d2.append(e2)
+        else:
             flag += 1
-        e1 += 1
+
         e2 += 1
-        if flag == 2:
+        if flag == 1:
             chk = 1
 
 
@@ -45,7 +53,10 @@ def makeBorder(nx, ny, t1, t2):
 def checkPopulation(nx, ny, t1, t2):
     for r in range(N):
         for c in range(N):
-            if board[r][c] == 0 and 0 <= r < nx+t1 and 0 <= c <= ny:
+            if board[r][c] == 5:
+                eachPopulation[5] += population[r][c]
+
+            elif board[r][c] == 0 and 0 <= r < nx+t1 and 0 <= c <= ny:
                 board[r][c] = 1
                 eachPopulation[1] += population[r][c]
 
@@ -60,28 +71,29 @@ def checkPopulation(nx, ny, t1, t2):
             elif board[r][c] == 0 and nx+t2 < r < N and ny-t1+t2 <= c < N:
                 board[r][c] = 4
                 eachPopulation[4] += population[r][c]
-            else:
-                board[r][c] = 5
-                eachPopulation[5] += population[r][c]
+
+def Five():
+    for i in range(N):
+        cnt = 0
+        chk = 0
+        for j in range(N):
+            if board[i][j] == 5:
+                if chk == 0:
+                    w = j
+                chk += 1
+                if chk == 2:
+                    break
+            if chk >= 1:
+                cnt += 1
+        if chk == 2:
+            for k in range(cnt):
+                board[i][w+k] = 5
 
 
 N = int(input())
 population = [list(map(int, input().split())) for _ in range(N)]
 eachPopulation = [0, 0, 0, 0, 0, 0]
 ans = 987654321
-# d1, d2 중복 조합 사용
-
-# 1 <= d1, d2
-
-# d2 <= N - y
-
-# d1 < y
-
-# d1 + d2 <= N - x
-
-# 기준 점을 잡고 d1, d2 값을 정한다. (중복 조합으로)
-# 경계선을 잇고 각 구역의 인구수를 구역별로 나눠 계산한다.
-# 가장 많은 구역과 적은 구역의 차의 최솟값을 구한다.
 
 for i in range(N):
     for j in range(N):
@@ -94,10 +106,15 @@ for i in range(N):
             for b in d2:
                 if a + b <= N - x:
                     board = [[0] * N for _ in range(N)]
+                    eachPopulation = [0, 0, 0, 0, 0, 0]
                     makeBorder(x-1, y-1, a, b)
+                    Five()
                     checkPopulation(x-1, y-1, a, b)
-                    result = max(eachPopulation) - min(eachPopulation)
-                    if ans > result:
-                        ans = result
+                    result = 0
+                    if eachPopulation != [0, 0, 0, 0, 0, 0]:
+                        eachPopulation.pop(0)
+                        result = max(eachPopulation) - min(eachPopulation)
+                        if ans > result:
+                            ans = result
 
 print(ans)
