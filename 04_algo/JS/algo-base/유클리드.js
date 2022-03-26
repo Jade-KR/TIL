@@ -19,3 +19,9 @@ function getGcd(a, b) {
 
 console.log(getGcd(4, 6));
 console.log(lcm(4, 5));
+
+function solution(arr) {
+	return arr.reduce((a, b) => (a * b) / getGcd(a, b));
+}
+
+solution([2, 3, 4, 5]);
