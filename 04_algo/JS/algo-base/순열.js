@@ -16,3 +16,7 @@ const getPermutations = function (arr, selectNumber) {
 
 	return results; // 결과 담긴 results return
 };
+
+console.time("calculatingTime");
+getPermutations([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7);
+console.timeEnd("calculatingTime");
