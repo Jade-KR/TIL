@@ -18,5 +18,5 @@ const getPermutations = function (arr, selectNumber) {
 };
 
 console.time("calculatingTime");
-getPermutations([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7);
+console.log(getPermutations([1, 2, 3], 3));
 console.timeEnd("calculatingTime");
